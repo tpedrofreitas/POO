@@ -41,7 +41,7 @@ namespace _01_DeclaracaoClasse
             //Obj5.ImprimeArea();
 
             //Instanciar
-           Conta conta2 = new Conta();
+          Conta conta2 = new Conta();
            conta2.Banco = 1;
            conta2.Agencia = "1234-5";
            conta2.Numero = "98765-4";
@@ -56,9 +56,14 @@ namespace _01_DeclaracaoClasse
            Console.WriteLine($"Saldo Atual: {conta2.ConsultaSaldo()}");
 
             Aluno aluno1 = new Aluno();
-            aluno1
+            aluno1.Nome = "Thiago";
+            aluno1.Codigo = 1;
+            aluno1.LancarNota(1, 8.6);
+            aluno1.LancarNota(2, 9.0);
+            aluno1.LancarNota(3, 9.5);
+            aluno1.LancarNota(4, 10.0);
 
-
+            Console.WriteLine($"Aluno {aluno1.Nome} {aluno1.Mencao()} com média de {aluno1.CalcularMedia():N2}");
         }
     }
 
@@ -151,37 +156,36 @@ namespace _01_DeclaracaoClasse
         {
            return Saldo;
         }
+    }
 
+    public class Aluno
+    {
+        public int Codigo;
+        public string Nome;
+        public double[] Notas = new double[4];
 
-        public class Aluno
+        public void LancarNota(int trimestre, double nota)
         {
-            public int Codigo;
-            public string Nome;
-            public double [] Notas = new double[4];
+            Notas[trimestre - 1] = nota;
+        }
+        public double CalcularMedia()
+        {
+            double media = 0;
+            foreach (double nota in Notas)
+            {
+                media += nota;
+            }
+            return media / 4;
 
-            public void LancarNota(int trimestre, double nota)
-            {
-                Notas[trimestre - 1] = nota;
-            }
-            public double CalcularMedia()
-            {
-                double media = 0;
-                foreach(double nota in Notas)
-                {
-                    media += nota;
-                }
-                return media / 4;
 
-                
-            }
-            public string Mencao()
-            {
-                if (CalcularMedia() >= 5.0)
-                    return "Aprovado";
-                else
-                    return "Reprovado";
-            }
+        }
+        public string Mencao()
+        {
+            if (CalcularMedia() >= 5.0)
+                return "Aprovado";
+            else
+                return "Reprovado";
         }
     }
-    
+
 }
