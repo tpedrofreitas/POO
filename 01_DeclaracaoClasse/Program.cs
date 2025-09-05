@@ -1,43 +1,62 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace _01_DeclaracaoClasse
 {
-    internal class Program
+    public class Program
     {
         static void Main(string[] args)
         {
-            Quadrado Obj1 = new Quadrado();
-            Obj1.Lado = 5;
-            Obj1.ImprimeArea();
+            //Quadrado Obj1 = new Quadrado();
+            //Obj1.Lado = 5;
+            //Obj1.ImprimeArea();
 
-            Obj1.Lado = 15;
-            Obj1.ImprimeArea();
+            //Obj1.Lado = 15;
+            //Obj1.ImprimeArea();
 
-            Quadrado Obj2 = new Quadrado();
-            Obj2.Lado = 25;
-            Obj2.ImprimeArea();
+            //Quadrado Obj2 = new Quadrado();
+            //Obj2.Lado = 25;
+            //Obj2.ImprimeArea();
 
-            Retangulo Obj3 = new Retangulo();
-            Obj3.Largura = 10;
-            Obj3.Altura = 5;
-            Obj3.ImprimeArea();
+            //Retangulo Obj3 = new Retangulo();
+            //Obj3.Largura = 10;
+            //Obj3.Altura = 5;
+            //Obj3.ImprimeArea();
 
-            Circulo Obj4 = new Circulo();
-            Obj4.Raio = 10;
-            Obj4.ImprimeArea();
+            //Circulo Obj4 = new Circulo();
+            //Obj4.Raio = 10;
+            //Obj4.ImprimeArea();
 
             
-            Obj4.Raio = 50;
-            Obj4.ImprimeArea();
+            //Obj4.Raio = 50;
+            //Obj4.ImprimeArea();
 
-            Triangulo Obj5 = new Triangulo();
-            Obj5.Base = 10;
-            Obj5.Altura = 5;
-            Obj5.ImprimeArea();
+            //Triangulo Obj5 = new Triangulo();
+            //Obj5.Base = 10;
+            //Obj5.Altura = 5;
+            //Obj5.ImprimeArea();
+
+            //Instanciar
+           Conta conta2 = new Conta();
+           conta2.Banco = 1;
+           conta2.Agencia = "1234-5";
+           conta2.Numero = "98765-4";
+           conta2.Saldo = 500.00;
+           conta2.Limite = 1000.00;
+
+
+            conta2.Depositar(1000.00);
+           Console.WriteLine($"Saldo Atual: { conta2.ConsultaSaldo()}");
+
+           conta2.Sacar(600.00);
+           Console.WriteLine($"Saldo Atual: {conta2.ConsultaSaldo()}");
+
+            Aluno aluno1 = new Aluno();
+            aluno1
 
 
         }
@@ -108,5 +127,61 @@ namespace _01_DeclaracaoClasse
         {
             Console.WriteLine($"TRinagulo com base de {Base} e altura com {Altura} e possui uma área de {CalculaArea()}");
         }
+
     }
+
+
+    public class Conta
+    {
+        public int Banco;
+        public string Agencia;
+        public string Numero;
+        public double Saldo;
+        public double Limite;
+
+        public void Depositar(Double valor)
+        {
+            Saldo += valor;
+        }
+        public void Sacar(Double valor)
+        { 
+            Saldo -= valor;
+        }
+        public double ConsultaSaldo()
+        {
+           return Saldo;
+        }
+
+
+        public class Aluno
+        {
+            public int Codigo;
+            public string Nome;
+            public double [] Notas = new double[4];
+
+            public void LancarNota(int trimestre, double nota)
+            {
+                Notas[trimestre - 1] = nota;
+            }
+            public double CalcularMedia()
+            {
+                double media = 0;
+                foreach(double nota in Notas)
+                {
+                    media += nota;
+                }
+                return media / 4;
+
+                
+            }
+            public string Mencao()
+            {
+                if (CalcularMedia() >= 5.0)
+                    return "Aprovado";
+                else
+                    return "Reprovado";
+            }
+        }
+    }
+    
 }
