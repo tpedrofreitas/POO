@@ -32,9 +32,15 @@ namespace _02_Construtores
 
         //O Construtor serve para instanciar o objeto e
         //Inicializar os atributos
-        public Quadrado(int Lado)
+       
+        public Quadrado():this(5)
         {   //this: acessa o membro da classe
-            this.Lado = Lado;
+            //this.Lado = Lado;
+        }
+        public Quadrado(int Lado) 
+        {
+            if (Lado < 0)
+                this.Lado = Lado;
         }
 
         public int CalculaArea()
