@@ -49,7 +49,7 @@ namespace _03_Propriedades
                 }
                 else if (operacao.ToUpper() == "E")
                 {
-                    Console.WriteLine($"Conta: {conta.getNumero()} Nome: {conta.getNome()} Saldo: {conta.getSaldo()}");
+                    Console.WriteLine($"Conta: {conta.getNumero()}Nome: {conta.getNome()} Saldo: {conta.getSaldo():C2}");
                     break;
                 }
                 else
@@ -75,16 +75,16 @@ namespace _03_Propriedades
         }
         
        // public string Nome;
-        private string nome;
+      private string nome;
 
         public string getNome()
         {
-            return nome;
+          return nome;
         }
-        public void setNome(string nome)
-        {
-            this.setNome(nome);
-        }
+       public void setNome(string nome)
+       {
+          this.nome = nome;
+       }
 
 
         //Transformar conta saldo com acesso privado
