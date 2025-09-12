@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35931.197 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05_PropriedadesAposNet9", "05_PropriedadesAposNet9.csproj", "{5564A4CD-DC78-4332-95B4-FB498F0B58AA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5564A4CD-DC78-4332-95B4-FB498F0B58AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5564A4CD-DC78-4332-95B4-FB498F0B58AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5564A4CD-DC78-4332-95B4-FB498F0B58AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5564A4CD-DC78-4332-95B4-FB498F0B58AA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0286FD3D-852F-427C-90EA-E8BA2739A995}
+	EndGlobalSection
+EndGlobal
