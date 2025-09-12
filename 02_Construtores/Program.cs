@@ -29,8 +29,7 @@ namespace _02_Construtores
         //Modificar de acesso Private
         //pode se acessado apenas dentro da Classe
         private int Lado;
-
-
+       
         //OverLoad (Sobrecarga) de construtor
         //Declarar mais de um construtor com a lista de argumentos diferentes
         //this(5) aciona o construtor que recebe um paramêtro
