@@ -105,7 +105,7 @@ namespace _07_CalendarioComFeriado
 
 
             Feriado[] diasFeriados = RetornaFeriados();
-            bool ehFeriado;
+          //  bool ehFeriado;
 
             //impressão do calendário
 
@@ -120,20 +120,23 @@ namespace _07_CalendarioComFeriado
                     if (calendario[semana, diaSemana] != 0)
 
                     {
-                        ehFeriado = false;
+                        //ehFeriado = false;
 
-                        for (int posicaoFeriados = 0; posicaoFeriados < diasFeriados.Length; posicaoFeriados++)
-                        {
-                            if (diasFeriados[posicaoFeriados] != null && diasFeriados[posicaoFeriados].Dia == calendario[semana,diaSemana])
-                            {
-                                ehFeriado = true;
-                                break;
-                            }
-                        }
+                        //for (int posicaoFeriados = 0; posicaoFeriados < diasFeriados.Length; posicaoFeriados++)
+                        //{
+                        //    if (diasFeriados[posicaoFeriados] != null && diasFeriados[posicaoFeriados].Dia == calendario[semana,diaSemana])
+                        //    {
+                        //        ehFeriado = true;
+                        //        break;
+                        //    }
+                        //}
 
-                       // if (diasFeriados.Contains(calendario[semana, diaSemana]) || diaSemana == 0)
-                       if (ehFeriado || diaSemana == 0) 
-                            Console.ForegroundColor = ConsoleColor.Red;
+                        // if (diasFeriados.Contains(calendario[semana, diaSemana]) || diaSemana == 0)
+                       // if (ehFeriado || diaSemana == 0)
+                            if (diasFeriados.Any(feriado => feriado != null && feriado.Dia == calendario[semana, diaSemana] ) || diaSemana == 0)
+                            
+
+                        Console.ForegroundColor = ConsoleColor.Red;
 
                         Console.Write(calendario[semana, diaSemana].ToString("D2") + "\t");
 
@@ -218,7 +221,7 @@ namespace _07_CalendarioComFeriado
 
             else if (mes == 10)
 
-                feriados[indice++] = new Feriado(12,"Nossa Senhora Aparecida");
+                feriados[indice++] = new Feriado(12, "Nossa Senhora Aparecida");
 
             else if (mes == 11)
 
@@ -226,13 +229,14 @@ namespace _07_CalendarioComFeriado
 
                 feriados[indice++] = new Feriado(2, "Finados");
 
-                feriados[indice++] = new Feriado (15,"Proclamação da República");
+                feriados[indice++] = new Feriado(15, "Proclamação da República");
 
                 feriados[indice++] = new Feriado(20, "Consciência Negra");
 
             }
 
             else if (mes == 12)
+                feriados[indice++] = new Feriado(8, "Padroeira da Cidade");
 
                 feriados[indice++] = new Feriado (25,"Natal");
 
