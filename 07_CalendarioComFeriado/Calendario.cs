@@ -236,10 +236,12 @@ namespace _07_CalendarioComFeriado
             }
 
             else if (mes == 12)
+            {
+
                 feriados[indice++] = new Feriado(8, "Padroeira da Cidade");
 
-                feriados[indice++] = new Feriado (25,"Natal");
-
+                feriados[indice++] = new Feriado(25, "Natal");
+            }
             DateTime pascoa = DomingoDePascoa();
 
             if (pascoa.Month == mes)
