@@ -42,25 +42,28 @@ namespace _08_Aluno
         public Aluno(string nome, int idade,double nota1, double nota2)
         {
             this.nome = nome;
-            this.idade= idade;
-            this.nota1 = nota1;
-            this.nota2 = nota2;
+            Idade= idade;
+            Nota1 = nota1;
+            Nota2 = nota2;
         }
         public string Nome
         {
             get { return nome; }
         }
+        
         public int Idade
         {
             get { return idade; }
-            private set
+            set
             {
-                if (value < 0)
-                idade = 0;  
+                if (value >= 0)
+                    idade = value;
 
                 else
-                idade = value;
-
+                
+                    Console.WriteLine("Idade Inválida");
+                    
+                
             }
 
         }
