@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35931.197 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "14_ColecaoHashSet", "14_ColecaoHashSet.csproj", "{9967E4A7-FE78-4AE0-8204-955E44AE599F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9967E4A7-FE78-4AE0-8204-955E44AE599F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9967E4A7-FE78-4AE0-8204-955E44AE599F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9967E4A7-FE78-4AE0-8204-955E44AE599F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9967E4A7-FE78-4AE0-8204-955E44AE599F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4A6C961F-1E25-43E8-94C0-C4C0F2798CA8}
+	EndGlobalSection
+EndGlobal
