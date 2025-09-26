@@ -12,19 +12,29 @@ namespace _11_ColecaoLista
         {
             List<string> nomes = new List<string>();
 
-           
-            for (int i = 1; i <= 5; i++)
+            Console.WriteLine("Digite 5 nomes (mínimo 3 caracteres cada):");
+
+            while (nomes.Count < 5)
             {
-                Console.Write($"Digite o {i}º nome: ");
+                Console.Write($"Nome {nomes.Count + 1}: ");
                 string nome = Console.ReadLine();
-                nomes.Add(nome); 
+
+                if (string.IsNullOrWhiteSpace(nome) || nome.Length < 3)
+                {
+                    Console.WriteLine(" Nome inválido! Digite pelo menos 3 caracteres.");
+                }
+                else
+                {
+                    nomes.Add(nome);
+                }
             }
 
-            Console.WriteLine("\n--- Nomes digitados ---");
-            foreach (string nome in nomes)
+            Console.WriteLine("\n Lista de nomes cadastrados:");
+            foreach (string n in nomes)
             {
-                Console.WriteLine(nome);
+                Console.WriteLine(n);
             }
+
         }
     }
 }
