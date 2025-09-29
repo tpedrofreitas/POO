@@ -11,10 +11,10 @@ namespace _15_ColecaoDictionary
         static void Main(string[] args)
         {
             Dictionary<int, String> alunoNomes = new Dictionary<int, String>();
-            alunoNomes.Add(1, "Thiago");
-            alunoNomes.Add(2, "Rafael");
-            alunoNomes.Add(3, "Pietro");
-            alunoNomes.Add(4, "Isac");
+            alunoNomes.Add(11, "Thiago");
+            alunoNomes.Add(12, "Rafael");
+            alunoNomes.Add(13, "Pietro");
+            alunoNomes.Add(14, "Isac");
 
             Console.WriteLine(" Lista de Alunos (RA - Nome):");
 
