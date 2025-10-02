@@ -67,7 +67,8 @@ namespace _17_Calendario
                     if (calendario[semana, diaSemana] != 0)
                     {
 
-                        if (diasFeriados.Any(feriado => feriado != null && feriado.Dia == calendario[semana, diaSemana]) || diaSemana == 0)
+                        if (diasFeriados.Any(feriado => feriado != null && feriado.Dia == calendario[semana, diaSemana]) || (DiaDaSemana)diaSemana == DiaDaSemana.Domingo)
+
                             Console.ForegroundColor = ConsoleColor.Red;
 
                         Console.Write(calendario[semana, diaSemana].ToString("D2") + "\t");
@@ -83,6 +84,8 @@ namespace _17_Calendario
             }
 
             Console.Write("\nFeriados: ");
+
+            diasFeriados.Sort();
 
             foreach (Feriado diaFeriado in diasFeriados)
             {
@@ -138,8 +141,8 @@ namespace _17_Calendario
             if ((Mes)CorpuChrist.Month == mes)
                 feriados.Add(new Feriado(CorpuChrist.Day, "Corpus Christi"));
 
-            //Array.Sort(feriados);
-
+           // Array.Sort(feriados);
+           
             return feriados;
         }
 
