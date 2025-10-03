@@ -8,7 +8,6 @@ namespace _18_ValidaçãoCPF
 {
     internal interface IDocumento
     {
-
         string ObterNumero();
         bool Validar();          
     }

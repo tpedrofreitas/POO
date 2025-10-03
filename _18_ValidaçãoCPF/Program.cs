@@ -18,7 +18,7 @@ namespace _08_ValidaCPF
             IDocumento documento = new CPF(cpfDigitado);
 
             if (documento.Validar())
-                Console.WriteLine("CPF VÁLIDO: " + documento.ObterNumero());
+                Console.WriteLine("CPF VÁLIDO: " );
             else
                 Console.WriteLine("CPF INVÁLIDO!");
 

@@ -9,7 +9,7 @@ namespace _18_ValidaçãoCPF
 {
     internal class CPF : IDocumento
     {
-        private string numero; 
+        private string numero { get; }
 
         public CPF(string numero)
         {
@@ -33,7 +33,7 @@ namespace _18_ValidaçãoCPF
                    numero[10] == CalculaDV(numero, 10, 11);
         }
 
-        private char CalculaDV(string cpf, int qtdeNumeros, int peso)
+        private int CalculaDV(string cpf, int qtdeNumeros, int peso)
         {
             int soma = 0;
             for (int i = 0; i < qtdeNumeros; i++)
