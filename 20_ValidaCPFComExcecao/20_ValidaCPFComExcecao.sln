@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35931.197 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "20_ValidaCPFComExcecao", "20_ValidaCPFComExcecao.csproj", "{A03A3369-9E11-44D7-804C-8A040D001BA7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A03A3369-9E11-44D7-804C-8A040D001BA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A03A3369-9E11-44D7-804C-8A040D001BA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A03A3369-9E11-44D7-804C-8A040D001BA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A03A3369-9E11-44D7-804C-8A040D001BA7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6194A5DE-8147-4151-B5BC-35BD07FD918B}
+	EndGlobalSection
+EndGlobal
