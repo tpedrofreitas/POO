@@ -20,12 +20,16 @@ namespace _20_ValidaCPFComExcecao
         {
             // Verifica se o CNPJ tem 14 dígitos
             if (this.Numero.Length != 14)
-                 return false;
-               // throw new Exception("O CNPJ deve ter 14 dígitos: ");
+                // return false;
+            throw new CPFQtdeDigitosException();
+
+            // throw new Exception("O CNPJ deve ter 14 dígitos: ");
             // Verifica se o CNPJ tem todos os números iguais
             if (this.Numero.Distinct().Count() == 1)
-                 return false;
-              //  throw new Exception("O CNPJ deve ter 14 dígitos: ");
+                throw new CPFMesmoNumeroException();
+            // return false;
+
+            //  throw new Exception("O CNPJ deve ter 14 dígitos: ");
             // Verifica se o CNPJ tem todos os números iguais
 
             // Calcula o 1º dígito verificador
